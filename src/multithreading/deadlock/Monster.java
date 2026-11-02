@@ -21,7 +21,6 @@ public class Monster {
                     System.out.println("Thread1 got the lock2");
                }
                System.out.println("Thread1 finishes the execution");
-
            }
         });
 
@@ -40,6 +39,7 @@ public class Monster {
                }
            }
 
+//            we don't need to manually unlock anything.
 //            synchronized (lock1) {
 //                System.out.println("Thread2 got the lock1");
 //                try {
@@ -53,7 +53,6 @@ public class Monster {
 //                }
 //                System.out.println("Thread2 finishes the execution");
 //            }
-
         });
         thread1.start();
         thread2.start();
